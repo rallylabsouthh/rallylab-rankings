@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RallyLab Rankings</title>
+  <meta name="description" content="RallyLab Tennis Rankings">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#"><span>RALLY</span>LAB</a>
+    <nav>
+      <a href="#rankings">Rankings</a>
+      <a href="#players">Players</a>
+      <a href="#matches">Matches</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">TRAIN. TEST. IMPROVE.</p>
+        <h1>RallyLab<br><span>Rankings</span></h1>
+        <p class="hero-copy">The competitive leaderboard for RallyLab players, tournaments and open plays.</p>
+        <a class="button" href="#rankings">View Rankings</a>
+      </div>
+      <div class="hero-card">
+        <p class="card-label">CURRENT LEADER</p>
+        <div id="leaderName" class="leader-name">—</div>
+        <div id="leaderPoints" class="leader-points">0 <small>PTS</small></div>
+        <div class="leader-meta"><span id="leaderClass">—</span><span id="leaderRecord">—</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap stats">
+    <div><strong id="statPlayers">0</strong><span>Players</span></div>
+    <div><strong id="statMatches">0</strong><span>Matches</span></div>
+    <div><strong id="statTournaments">0</strong><span>Tournaments</span></div>
+    <div><strong id="statAvg">0%</strong><span>Average Win Rate</span></div>
+  </section>
+
+  <section id="rankings" class="wrap section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">RALLYLAB COMPETITIVE INDEX</p>
+        <h2>Player Rankings</h2>
+      </div>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search player..." aria-label="Search player">
+        <select id="classFilter" aria-label="Filter by class">
+          <option value="ALL">All Classes</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Player</th><th>Class</th><th>Points</th><th>W</th><th>L</th><th>Win %</th><th>Movement</th></tr></thead>
+        <tbody id="rankingBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="players" class="wrap section">
+    <div class="section-head">
+      <div><p class="eyebrow">PLAYER PROFILES</p><h2>Featured Players</h2></div>
+    </div>
+    <div id="playerCards" class="cards"></div>
+  </section>
+
+  <section id="matches" class="wrap section">
+    <div class="section-head">
+      <div><p class="eyebrow">LATEST RESULTS</p><h2>Recent Matches</h2></div>
+    </div>
+    <div id="matchList" class="match-list"></div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div><p class="eyebrow">ABOUT RALLYLAB</p><h2>Built for local competition.</h2></div>
+      <p>RallyLab Rankings is a community ranking system for RallyLab tournaments and open plays. Points, records and ranking movement are calculated from the data in <code>data.js</code>.</p>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>RALLYLAB</span><span>Train. Test. Improve.</span></div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
