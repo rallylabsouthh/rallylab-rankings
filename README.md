@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/31015321/README.md)
 # RallyLab Ranking Website — Version 1
 
 A lightweight, responsive static tennis ranking website for RallyLab.
